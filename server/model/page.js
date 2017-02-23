@@ -40,7 +40,7 @@ Page.findByIDAndDelete = function(id){
 
 //instance methods
 Page.prototype.validate = function(){
-  if(!this.title || !this.content || !this.showInNav)
+  if(!this.title || !this.content)
     return Promise.reject(createError(400, 'missing required property'));
   return Promise.resolve();
 };
